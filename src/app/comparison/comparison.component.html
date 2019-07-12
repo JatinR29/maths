@@ -1,0 +1,22 @@
+<div class="card text-center" style="margin: 10%">
+    <div class="card-header">
+      Compare
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Please compare the following numbers </h5>
+      <div class="card-text" style="font-weight: bold">
+        {{num1}} 
+        <span>__</span>
+        {{num2}}
+      </div>
+      <button type="button" class="btn" (click)="onClick('lessThen')"><</button>
+      <button type="button" class="btn" (click)="onClick('greaterThen')">></button>
+      <button type="button" class="btn" (click)="onClick('equal')">=</button>
+      <div>
+          <button type="button" class="btn" (click)="newQue()">New Que</button>
+      </div>
+    </div>
+    <div class="card-footer text-muted" *ngIf="result">
+        {{ result }}
+    </div>
+  </div>

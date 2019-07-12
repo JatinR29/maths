@@ -1,0 +1,33 @@
+
+
+<div class="card text-center" style="margin: 10%">
+    <div class="card-header">
+      Compare
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Please compare the following numbers </h5>
+      <div class="row">
+        <div class="col-sm-2 form-control" style="text-align: center" *ngFor="let num of numberList" >
+          {{num}}
+        </div>
+      </div>
+        <label>Please write your ans in accending order</label><br>
+
+        <div class="row">
+            <input class="form-control col-sm-2" type="text" #num1/>
+            <input class="form-control col-sm-2" type="text" #num2/>
+            <input class="form-control col-sm-2" type="text" #num3/>
+            <input class="form-control col-sm-2" type="text" #num4/>
+            <input class="form-control col-sm-2" type="text" #num5/>
+            <input class="form-control col-sm-2" type="text" #num6/>
+        </div>
+        
+      <div>
+          <button type="button" class="btn btn-primary" style="margin: 5px" (click)="ans(num1.value,num2.value,num3.value,num4.value,num5.value,num6.value)">Submit</button>
+          <button type="button" class="btn" style="margin: 5px; background-color:#BA4A00; color: white;" (click)="newQue()">New Que</button>
+      </div>
+    </div>
+    <div class="card-footer text-muted" *ngIf="result">
+        {{ result }}
+    </div>
+  </div>
